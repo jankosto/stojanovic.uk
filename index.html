@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <!-- Search engines: do NOT index this page -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stojanovic Family</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%' stop-color='rgba(206,17,38,1)'/%3E%3Cstop offset='35%' stop-color='rgba(200,200,200,1)'/%3E%3Cstop offset='100%' stop-color='rgba(0,20,60,1)'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='14' fill='url(%23g)'/%3E%3Ctext x='50' y='62' font-size='54' font-family='serif' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E"/>
@@ -53,16 +56,7 @@
       opacity: 0;
       animation: fadeIn 0.7s ease forwards 0.4s;
     }
-    .names {
-      margin-top: clamp(.65rem, 1.8vw, 1rem);
-      font-weight: 500;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      font-size: clamp(1rem, 2.2vw, 1.2rem);
-      color: rgba(255,255,255,0.92);
-      opacity: 0;
-      animation: fadeIn 0.7s ease forwards 0.6s;
-    }
+    .names { /* (kept for reference; converted to image-based to reduce scraping) */ }
     .divider {
       width: min(240px, 52%);
       height: 1px;
@@ -86,12 +80,15 @@
       animation: fadeIn 0.7s ease forwards 1.2s;
     }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-  </style>
+  .names-img{margin-top:clamp(.65rem,1.8vw,1rem);width:100%;height:clamp(28px,3.2vw,44px);background-repeat:no-repeat;background-position:center;background-size:contain;user-select:none;-webkit-user-select:none;}
+/* Inline SVG for names (harder for bots to scrape than real text) */
+.names-img{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 100'><style>text{font-family: DM Sans, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-weight:600; letter-spacing:8px;}</style><text x='50%' y='65' dominant-baseline='middle' text-anchor='middle' fill='rgba(255,255,255,0.92)'>JANKO · MILIJANA · JURIJ · SIBIN</text></svg>");}
+</style>
 </head>
 <body>
   <main class="card" role="main" aria-label="Stojanovic Family home">
     <h1 class="title">STOJANOVIC FAMILY</h1>
-    <p class="names">JANKO · MILIJANA · JURIJ · SIBIN</p>
+    <div class="names-img" role="img" aria-label="JANKO · MILIJANA · JURIJ · SIBIN"></div>
     <div class="divider" aria-hidden="true"></div>
     <p class="location">Hampton Hill · London · United Kingdom</p>
     <footer>© <span id="year"></span> Stojanovic</footer>
